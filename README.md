@@ -14,3 +14,5 @@ Aplicación móvil de control de medicamentos desarrollada en React Native utili
 - **React Native (Expo)**
 - **MongoDB:** Para almacenamiento y gestión de datos.
 - **Node.js y Express:** API para comunicación entre la app y la base de datos.
+
+## No guarda las imagenes de los medicamentos.

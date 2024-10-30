@@ -11,7 +11,6 @@ async function registerUser(req, res) {
             res.status(500).send({ message: "Error enciptando la clave." });
         } else {
             user.Password = hash;
-            console.log("Usuario ", user);
             user.save().then(() => {
                 console.log('Usuario guardado con éxito');
                 res.status(200).send({ status: 'Usuario guardado con éxito' });
@@ -43,7 +42,6 @@ async function findByIdUser(req, res) {
 async function findByNameAndPassword(req, res) {
     try {
       const user = await User.find({ Mail: req.params.name }).exec();
-      console.log("usuario desde api: ", user);
   
       if (!user || user.length === 0) {
         return res.status(404).send({ message: "El usuario no existe" });
